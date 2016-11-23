@@ -26,29 +26,6 @@
     
     return _sharedInstance;
 }
-//do json parse and return data back
--(NSDictionary*)doJsonSerializationAndReturnDataBack:(NSString*)jsonPath;
-{
-    NSError *error = nil;
-    NSData *data  = [[NSData alloc] initWithContentsOfFile:jsonPath];
-    NSMutableDictionary * jsonDictionary = [NSJSONSerialization JSONObjectWithData:data
-                                                                           options:0
-                                                                             error:&error];
-    if (error) {
-        NSLog(@"Something went wrong! %@", error.localizedDescription);
-    }
-    else {
-        NSLog(@"json info: %@", jsonDictionary);
-    }
-    return jsonDictionary;
-}
-//check internet connection
--(BOOL)IsConnectionAvailable
-{
-    Reachability *reachability = [Reachability reachabilityForInternetConnection];
-    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
-    return !(networkStatus == NotReachable);
-}
 //insert data
 -(void)insertUserInfo:(NSData*)imageRefId :(NSString*)title
 {

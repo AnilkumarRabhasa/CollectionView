@@ -13,8 +13,6 @@
 @interface UtilityClass : NSObject
 
 +(UtilityClass*)sharedInstance;
--(NSDictionary*)doJsonSerializationAndReturnDataBack:(NSString*)jsonPath;
--(BOOL)IsConnectionAvailable;
 @property (nonatomic, strong) NSMutableArray *productDetailArray,*variantArray,*selectedKeysArray,*userSelectedDataArray;
 @property (nonatomic, strong) NSMutableDictionary *selectedDataDictionary;
 //insert data to coredata

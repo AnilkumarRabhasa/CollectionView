@@ -62,7 +62,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     //  NSMutableArray *sectionArray = [self.dataArray objectAtIndex:section];
-    return [self.imagesArray count]-1;
+    return [self.imagesArray count];
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"cellIdentifier";
